@@ -37,7 +37,7 @@ export default function Navbar() {
           className="text-white font-bold text-lg tracking-tight"
           whileHover={{ scale: 1.05 }}
         >
-          alex<span className="text-violet-400">.</span>dev
+          mari<span className="text-violet-400">.</span>dev
         </motion.a>
 
         {/* Desktop links */}

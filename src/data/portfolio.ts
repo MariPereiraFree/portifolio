@@ -1,23 +1,22 @@
 import type { Profile, SkillGroup, Project, Job } from '../types/portfolio';
 
 export const profile: Profile = {
-  name: 'Alex Rivera',
-  role: 'Full Stack Developer',
+  name: 'Mari Pereira',
+  role: 'Front-end Developer',
   tagline: 'I build fast, accessible, and beautiful web experiences.',
-  bio: "Hi, I'm Alex — a full stack developer with 4+ years of experience crafting modern web applications. I love turning complex problems into clean, elegant solutions. Currently open to new opportunities.",
-  location: 'São Paulo, Brazil',
-  email: 'alex.rivera@email.com',
-  github: 'https://github.com/alexrivera',
-  linkedin: 'https://linkedin.com/in/alexrivera',
-  twitter: 'https://twitter.com/alexrivera',
-  avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Alex',
+  bio: "Hi, I'm Mari — a front-end developer with 4+ years of experience crafting modern web applications. I love turning complex problems into clean, elegant solutions. Currently open to new opportunities.",
+  location: 'Jacareí/, Brazil',
+  email: 'mari.savoldi@protonmail.com',
+  github: 'https://github.com/MariPereiraFree',
+  linkedin: 'https://www.linkedin.com/in/mariana-savoldi-pereira/',
+  avatar: 'https://avatars.githubusercontent.com/u/261661215?v=4',
 };
 
 export const skills: SkillGroup[] = [
-  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'NestJS', 'PostgreSQL', 'Redis'] },
-  { category: 'DevOps', items: ['Docker', 'CI/CD', 'AWS', 'Vercel', 'GitHub Actions'] },
-  { category: 'Tools', items: ['Git', 'Figma', 'Postman', 'Vitest', 'Playwright'] },
+  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'MUI'] },
+  { category: 'Backend', items: ['Node.js', 'Express', 'NestJS', 'PostgreSQL'] },
+  { category: 'DevOps', items: ['CI/CD', 'AWS', 'Vercel', 'Netlify', 'GitHub Actions'] },
+  { category: 'Tools', items: ['Git', 'Figma', 'Jest'] },
 ];
 
 export const projects: Project[] = [
@@ -26,7 +25,7 @@ export const projects: Project[] = [
     title: 'TaskFlow',
     description: 'A real-time collaborative task manager with drag-and-drop boards, live cursors, and team presence indicators.',
     tags: ['React', 'Node.js', 'WebSocket', 'PostgreSQL'],
-    github: 'https://github.com/alexrivera/taskflow',
+    github: 'changeme',
     live: 'https://taskflow.demo',
     featured: true,
     gradient: 'from-violet-600 to-indigo-600',
@@ -36,7 +35,7 @@ export const projects: Project[] = [
     title: 'ShopNest',
     description: 'Full-featured e-commerce platform with Stripe payments, inventory management, and an admin dashboard.',
     tags: ['Next.js', 'Stripe', 'Prisma', 'TypeScript'],
-    github: 'https://github.com/alexrivera/shopnest',
+    github: 'changeme',
     live: 'https://shopnest.demo',
     featured: true,
     gradient: 'from-pink-600 to-rose-600',
@@ -46,7 +45,7 @@ export const projects: Project[] = [
     title: 'DevMetrics',
     description: 'GitHub analytics dashboard that visualizes contribution patterns, PR review cycles, and team velocity.',
     tags: ['React', 'GitHub API', 'Recharts', 'Tailwind'],
-    github: 'https://github.com/alexrivera/devmetrics',
+    github: 'changeme',
     live: 'https://devmetrics.demo',
     featured: false,
     gradient: 'from-cyan-600 to-teal-600',
@@ -56,7 +55,7 @@ export const projects: Project[] = [
     title: 'Nomad Blog',
     description: 'A headless CMS-powered blog with MDX support, full-text search, and reading progress tracking.',
     tags: ['Next.js', 'Contentlayer', 'MDX', 'Algolia'],
-    github: 'https://github.com/alexrivera/nomad-blog',
+    github: 'changeme',
     live: 'https://nomad-blog.demo',
     featured: false,
     gradient: 'from-amber-600 to-orange-600',

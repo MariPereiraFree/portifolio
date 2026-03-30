@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✦ alex.dev — Personal Portfolio
+# ✦ mari.dev — Personal Portfolio
 
 > *A dark, animated, pixel-perfect developer portfolio.*
 > *Built to impress. Shipped to last.*
@@ -61,17 +61,17 @@ src/
 
 ## 👤 Who am I?
 
-Hi! I'm **Alex Rivera**, a Full Stack Developer based in São Paulo, Brazil. I've been building web products for 4+ years — from polished marketing sites to complex SaaS platforms. I care deeply about:
+Hi! I'm **Mariana Pereira**, but you can call me **Mari** or **Mary**, I'm a Front End Developer based in Jacareí-SP, Brazil. I've been building web products for 4+ years — from polished marketing sites to complex SaaS platforms. I care deeply about:
 
 - Writing code that's easy to read and maintain
 - Shipping fast without cutting corners on quality
-- Designing interfaces that feel as good as they look
+- Working interfaces that delight and satisfy my customers
 
-When I'm not in front of a screen, I'm probably hiking, reading science fiction, or experimenting with new tech just for fun.
+When I'm not in front of a screen, I'm probably listening to music, reading fantasy, or studying new technologies just for fun.
 
-📬 **Let's talk:** [alex.rivera@email.com](mailto:alex.rivera@email.com)
-🔗 **GitHub:** [github.com/alexrivera](https://github.com/alexrivera)
-💼 **LinkedIn:** [linkedin.com/in/alexrivera](https://linkedin.com/in/alexrivera)
+📬 **Let's talk:** [mari.savoldi@protonmail.com](mailto:mari.savoldi@protonmail.com)
+🔗 **GitHub:** [github.com/MariPereiraFree](https://github.com/MariPereiraFree)
+💼 **LinkedIn:** [linkedin.com/in/mariana-savoldi-pereira](https://www.linkedin.com/in/mariana-savoldi-pereira/)
 
 ---
 
@@ -79,8 +79,7 @@ When I'm not in front of a screen, I'm probably hiking, reading science fiction,
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/alexrivera/portifolio.git
-cd portifolio
+git clone git@github.com:MariPereiraFree/portifolio.git
 
 # 2. Install dependencies
 npm install
