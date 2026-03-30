@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { skills } from '../data/portfolio';
 
 export default function Skills() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
@@ -16,7 +16,7 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Tech Stack</p>
-          <h2 className="text-4xl font-bold text-white">Skills & Technologies</h2>
+          <h2 className="text-4xl font-bold text-white">Skills &amp; Technologies</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
             Tools and technologies I work with on a daily basis to build great products.
           </p>

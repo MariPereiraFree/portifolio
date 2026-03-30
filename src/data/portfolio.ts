@@ -1,4 +1,6 @@
-export const profile = {
+import type { Profile, SkillGroup, Project, Job } from '../types/portfolio';
+
+export const profile: Profile = {
   name: 'Alex Rivera',
   role: 'Full Stack Developer',
   tagline: 'I build fast, accessible, and beautiful web experiences.',
@@ -11,14 +13,14 @@ export const profile = {
   avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Alex',
 };
 
-export const skills = [
+export const skills: SkillGroup[] = [
   { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'] },
   { category: 'Backend', items: ['Node.js', 'Express', 'NestJS', 'PostgreSQL', 'Redis'] },
   { category: 'DevOps', items: ['Docker', 'CI/CD', 'AWS', 'Vercel', 'GitHub Actions'] },
   { category: 'Tools', items: ['Git', 'Figma', 'Postman', 'Vitest', 'Playwright'] },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
     title: 'TaskFlow',
@@ -61,7 +63,7 @@ export const projects = [
   },
 ];
 
-export const experience = [
+export const experience: Job[] = [
   {
     company: 'Nexora Labs',
     role: 'Senior Frontend Developer',

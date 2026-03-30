@@ -1,13 +1,25 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ArrowDown, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 import { profile } from '../data/portfolio';
 
-const fadeUp = (delay = 0) => ({
+interface FadeUpProps {
+  initial: { opacity: number; y: number };
+  animate: { opacity: number; y: number };
+  transition: { duration: number; delay: number; ease: string };
+}
+
+const fadeUp = (delay = 0): FadeUpProps => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: 'easeOut' },
 });
+
+const socialLinks = [
+  { icon: GithubIcon, href: profile.github, label: 'GitHub' },
+  { icon: LinkedinIcon, href: profile.linkedin, label: 'LinkedIn' },
+  { icon: TwitterIcon, href: profile.twitter, label: 'Twitter' },
+] as const;
 
 export default function Hero() {
   return (
@@ -44,7 +56,7 @@ export default function Hero() {
           {...fadeUp(0.2)}
           className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6"
         >
-          Hi, I'm{' '}
+          Hi, I&apos;m{' '}
           <span className="relative inline-block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">
               {profile.name}
@@ -82,11 +94,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div {...fadeUp(0.6)} className="flex items-center justify-center gap-4">
-          {[
-            { icon: GithubIcon, href: profile.github, label: 'GitHub' },
-            { icon: LinkedinIcon, href: profile.linkedin, label: 'LinkedIn' },
-            { icon: TwitterIcon, href: profile.twitter, label: 'Twitter' },
-          ].map(({ icon: Icon, href, label }) => (
+          {socialLinks.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
               href={href}

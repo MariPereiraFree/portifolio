@@ -1,19 +1,21 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { profile } from '../data/portfolio';
 import * as Avatar from '@radix-ui/react-avatar';
+import type { Stat } from '../types/portfolio';
+
+const stats: Stat[] = [
+  { value: '4+', label: 'Years experience' },
+  { value: '30+', label: 'Projects shipped' },
+  { value: '15+', label: 'Happy clients' },
+  { value: '∞', label: 'Cups of coffee' },
+];
+
+const traits = ['Problem Solver', 'Team Player', 'Fast Learner', 'Pixel-Perfect'] as const;
 
 export default function About() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
-
-  const stats = [
-    { value: '4+', label: 'Years experience' },
-    { value: '30+', label: 'Projects shipped' },
-    { value: '15+', label: 'Happy clients' },
-    { value: '∞', label: 'Cups of coffee' },
-  ];
 
   return (
     <section id="about" className="py-24 px-6" ref={ref}>
@@ -72,11 +74,11 @@ export default function About() {
             </p>
 
             <p className="text-slate-400 leading-relaxed">
-              When I'm not coding, you'll find me hiking, reading sci-fi, or tinkering with side projects. I believe the best products come from teams that combine technical rigor with genuine empathy for users.
+              When I&apos;m not coding, you&apos;ll find me hiking, reading sci-fi, or tinkering with side projects. I believe the best products come from teams that combine technical rigor with genuine empathy for users.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {['Problem Solver', 'Team Player', 'Fast Learner', 'Pixel-Perfect'].map((trait) => (
+              {traits.map((trait) => (
                 <span
                   key={trait}
                   className="px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-sm font-medium"

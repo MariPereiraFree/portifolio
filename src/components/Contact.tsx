@@ -3,24 +3,29 @@ import { useRef, useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 import { profile } from '../data/portfolio';
+import type { FormState, SocialLink } from '../types/portfolio';
+
+const socials: SocialLink[] = [
+  { icon: GithubIcon, label: 'GitHub', href: profile.github, color: 'hover:text-white' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: profile.linkedin, color: 'hover:text-blue-400' },
+  { icon: TwitterIcon, label: 'Twitter', href: profile.twitter, color: 'hover:text-sky-400' },
+];
+
+const inputFields = [
+  { id: 'name' as const, label: 'Name', type: 'text', placeholder: 'Your name' },
+  { id: 'email' as const, label: 'Email', type: 'email', placeholder: 'you@email.com' },
+];
 
 export default function Contact() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Mock submit
     setTimeout(() => setSent(true), 500);
   };
-
-  const socials = [
-    { icon: GithubIcon, label: 'GitHub', href: profile.github, color: 'hover:text-white' },
-    { icon: LinkedinIcon, label: 'LinkedIn', href: profile.linkedin, color: 'hover:text-blue-400' },
-    { icon: TwitterIcon, label: 'Twitter', href: profile.twitter, color: 'hover:text-sky-400' },
-  ];
 
   return (
     <section id="contact" className="py-24 px-6" ref={ref}>
@@ -32,9 +37,9 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Contact</p>
-          <h2 className="text-4xl font-bold text-white">Let's work together</h2>
+          <h2 className="text-4xl font-bold text-white">Let&apos;s work together</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Reach out and let's make something great.
+            Have a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s make something great.
           </p>
         </motion.div>
 
@@ -49,7 +54,7 @@ export default function Contact() {
             <div>
               <h3 className="text-white font-semibold text-lg mb-2">Get in touch</h3>
               <p className="text-slate-400 leading-relaxed">
-                I'm currently available for freelance work and full-time positions. If you have a project that needs a skilled developer, I'm your person.
+                I&apos;m currently available for freelance work and full-time positions. If you have a project that needs a skilled developer, I&apos;m your person.
               </p>
             </div>
 
@@ -96,7 +101,7 @@ export default function Contact() {
               >
                 <CheckCircle className="text-green-400" size={48} />
                 <h3 className="text-white font-semibold text-xl">Message sent!</h3>
-                <p className="text-slate-400">Thanks for reaching out. I'll get back to you soon.</p>
+                <p className="text-slate-400">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 <button
                   onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); }}
                   className="text-violet-400 hover:text-violet-300 text-sm underline"
@@ -106,10 +111,7 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                {[
-                  { id: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
-                  { id: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com' },
-                ].map(({ id, label, type, placeholder }) => (
+                {inputFields.map(({ id, label, type, placeholder }) => (
                   <div key={id}>
                     <label htmlFor={id} className="block text-sm font-medium text-slate-400 mb-1.5">
                       {label}

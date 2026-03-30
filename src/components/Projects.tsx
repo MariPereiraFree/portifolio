@@ -4,8 +4,15 @@ import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { projects } from '../data/portfolio';
+import type { Project } from '../types/portfolio';
 
-function ProjectCard({ project, index, inView }) {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+  inView: boolean;
+}
+
+function ProjectCard({ project, index, inView }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -88,7 +95,7 @@ function ProjectCard({ project, index, inView }) {
 }
 
 export default function Projects() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   const featured = projects.filter((p) => p.featured);
@@ -106,7 +113,7 @@ export default function Projects() {
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Portfolio</p>
           <h2 className="text-4xl font-bold text-white">Featured Projects</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
-            A selection of things I've built. Each project taught me something new.
+            A selection of things I&apos;ve built. Each project taught me something new.
           </p>
         </motion.div>
 

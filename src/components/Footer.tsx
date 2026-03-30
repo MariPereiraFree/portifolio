@@ -12,7 +12,7 @@ export default function Footer() {
             <span className="text-violet-400 font-medium">{profile.name}</span>{' '}
             with React + Vite + Tailwind
           </p>
-          <p>© {new Date().getFullYear()} — All rights reserved</p>
+          <p>&copy; {new Date().getFullYear()} &mdash; All rights reserved</p>
         </div>
       </div>
     </footer>

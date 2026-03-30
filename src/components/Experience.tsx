@@ -5,7 +5,7 @@ import * as Separator from '@radix-ui/react-separator';
 import { experience } from '../data/portfolio';
 
 export default function Experience() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
