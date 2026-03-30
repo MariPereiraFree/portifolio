@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Twitter, MapPin } from 'lucide-react';
+import { ArrowDown, MapPin } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 import { profile } from '../data/portfolio';
 
 const fadeUp = (delay = 0) => ({
@@ -82,9 +83,9 @@ export default function Hero() {
 
         <motion.div {...fadeUp(0.6)} className="flex items-center justify-center gap-4">
           {[
-            { icon: Github, href: profile.github, label: 'GitHub' },
-            { icon: Linkedin, href: profile.linkedin, label: 'LinkedIn' },
-            { icon: Twitter, href: profile.twitter, label: 'Twitter' },
+            { icon: GithubIcon, href: profile.github, label: 'GitHub' },
+            { icon: LinkedinIcon, href: profile.linkedin, label: 'LinkedIn' },
+            { icon: TwitterIcon, href: profile.twitter, label: 'Twitter' },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

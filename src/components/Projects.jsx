@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { GithubIcon } from './SocialIcons';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { projects } from '../data/portfolio';
 
@@ -30,7 +31,7 @@ function ProjectCard({ project, index, inView }) {
                     rel="noopener noreferrer"
                     className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
                   >
-                    <Github size={15} />
+                    <GithubIcon size={15} />
                   </a>
                 </Tooltip.Trigger>
                 <Tooltip.Portal>

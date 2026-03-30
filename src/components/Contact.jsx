@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send, CheckCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 import { profile } from '../data/portfolio';
 
 export default function Contact() {
@@ -16,9 +17,9 @@ export default function Contact() {
   };
 
   const socials = [
-    { icon: Github, label: 'GitHub', href: profile.github, color: 'hover:text-white' },
-    { icon: Linkedin, label: 'LinkedIn', href: profile.linkedin, color: 'hover:text-blue-400' },
-    { icon: Twitter, label: 'Twitter', href: profile.twitter, color: 'hover:text-sky-400' },
+    { icon: GithubIcon, label: 'GitHub', href: profile.github, color: 'hover:text-white' },
+    { icon: LinkedinIcon, label: 'LinkedIn', href: profile.linkedin, color: 'hover:text-blue-400' },
+    { icon: TwitterIcon, label: 'Twitter', href: profile.twitter, color: 'hover:text-sky-400' },
   ];
 
   return (
