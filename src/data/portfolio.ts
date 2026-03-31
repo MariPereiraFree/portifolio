@@ -22,7 +22,7 @@ export const skills: SkillGroup[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'TaskFlow',
+    title: 'Alvorada Concierge',
     description: 'A real-time collaborative task manager with drag-and-drop boards, live cursors, and team presence indicators.',
     tags: ['React', 'Node.js', 'WebSocket', 'PostgreSQL'],
     github: 'changeme',
