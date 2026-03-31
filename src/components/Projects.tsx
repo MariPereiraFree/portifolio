@@ -78,7 +78,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
           </div>
         </div>
 
-        <p className="text-slate-400 text-sm leading-relaxed mb-4">{project.description}</p>
+        <p className="text-slate-300 text-sm leading-relaxed mb-4">{project.description}</p>
 
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (

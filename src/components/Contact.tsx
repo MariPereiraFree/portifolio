@@ -71,7 +71,7 @@ export default function Contact() {
             </a>
 
             <div className="space-y-3">
-              <p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Find me on</p>
+              <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">Find me on</p>
               <div className="flex gap-3">
                 {socials.map(({ icon: Icon, label, href, color }) => (
                   <a
@@ -127,7 +127,7 @@ export default function Contact() {
                       placeholder={placeholder}
                       value={form[id]}
                       onChange={(e) => setForm({ ...form, [id]: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-400 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-300 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors"
                     />
                   </div>
                 ))}
@@ -142,7 +142,7 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-200 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-300 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors resize-none"
                   />
                 </div>
                 <button
