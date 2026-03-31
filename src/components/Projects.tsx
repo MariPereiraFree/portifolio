@@ -1,10 +1,11 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { ExternalLink } from 'lucide-react';
-import { GithubIcon } from './SocialIcons';
-import * as Tooltip from '@radix-ui/react-tooltip';
-import { projects } from '../data/portfolio';
-import type { Project } from '../types/portfolio';
+import * as Tooltip from '@radix-ui/react-tooltip'
+import { motion, useInView } from 'framer-motion'
+import { ExternalLink } from 'lucide-react'
+import { useRef } from 'react'
+
+import { projects } from '../data/portfolio'
+import type { Project } from '../types/portfolio'
+import { GithubIcon } from './SocialIcons'
 
 interface ProjectCardProps {
   project: Project;
@@ -21,7 +22,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
       className="group relative bg-[#111118] border border-[#1e1e2e] rounded-2xl overflow-hidden hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-900/10"
     >
       {/* Gradient header */}
-      <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+      <div className={`h-2 bg-linear-to-r ${project.gradient}`} />
 
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
@@ -91,15 +92,15 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
         </div>
       </div>
     </motion.div>
-  );
+  )
 }
 
 export default function Projects() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
 
-  const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
+  const featured = projects.filter((p) => p.featured)
+  const rest = projects.filter((p) => !p.featured)
 
   return (
     <section id="projects" className="py-24 px-6" ref={ref}>
@@ -130,5 +131,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,31 +1,31 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
-import { profile } from '../data/portfolio';
-import type { FormState, SocialLink } from '../types/portfolio';
+import { motion, useInView } from 'framer-motion'
+import { CheckCircle,Mail, Send } from 'lucide-react'
+import { useRef, useState } from 'react'
+
+import { profile } from '../data/portfolio'
+import type { FormState, SocialLink } from '../types/portfolio'
+import { GithubIcon, LinkedinIcon } from './SocialIcons'
 
 const socials: SocialLink[] = [
   { icon: GithubIcon, label: 'GitHub', href: profile.github, color: 'hover:text-white' },
   { icon: LinkedinIcon, label: 'LinkedIn', href: profile.linkedin, color: 'hover:text-blue-400' },
-  { icon: TwitterIcon, label: 'Twitter', href: profile.twitter, color: 'hover:text-sky-400' },
-];
+]
 
 const inputFields = [
   { id: 'name' as const, label: 'Name', type: 'text', placeholder: 'Your name' },
   { id: 'email' as const, label: 'Email', type: 'email', placeholder: 'you@email.com' },
-];
+]
 
 export default function Contact() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' });
+  const ref = useRef<HTMLElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
+  const [sent, setSent] = useState(false)
+  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' })
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setTimeout(() => setSent(true), 500);
-  };
+    e.preventDefault()
+    setTimeout(() => setSent(true), 500)
+  }
 
   return (
     <section id="contact" className="py-24 px-6" ref={ref}>
@@ -39,7 +39,8 @@ export default function Contact() {
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Contact</p>
           <h2 className="text-4xl font-bold text-white">Let&apos;s work together</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
-            Have a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s make something great.
+            Have a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s
+            make something great.
           </p>
         </motion.div>
 
@@ -54,7 +55,8 @@ export default function Contact() {
             <div>
               <h3 className="text-white font-semibold text-lg mb-2">Get in touch</h3>
               <p className="text-slate-400 leading-relaxed">
-                I&apos;m currently available for freelance work and full-time positions. If you have a project that needs a skilled developer, I&apos;m your person.
+                I&apos;m currently available for freelance work and full-time positions. If you
+                have a project that needs a skilled developer, I&apos;m your person.
               </p>
             </div>
 
@@ -78,7 +80,9 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className={`w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/8 text-slate-400 ${color} transition-all duration-200 hover:bg-white/10`}
+                    className={`w-11 h-11 flex items-center justify-center rounded-xl
+                      bg-white/5 border border-white/8 text-slate-400 ${color}
+                      transition-all duration-200 hover:bg-white/10`}
                   >
                     <Icon size={18} />
                   </a>
@@ -103,7 +107,7 @@ export default function Contact() {
                 <h3 className="text-white font-semibold text-xl">Message sent!</h3>
                 <p className="text-slate-400">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 <button
-                  onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); }}
+                  onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
                   className="text-violet-400 hover:text-violet-300 text-sm underline"
                 >
                   Send another
@@ -154,5 +158,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }

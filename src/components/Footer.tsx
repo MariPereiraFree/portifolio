@@ -1,5 +1,6 @@
-import * as Separator from '@radix-ui/react-separator';
-import { profile } from '../data/portfolio';
+import * as Separator from '@radix-ui/react-separator'
+
+import { profile } from '../data/portfolio'
 
 export default function Footer() {
   return (
@@ -16,5 +17,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

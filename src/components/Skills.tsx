@@ -1,10 +1,11 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { skills } from '../data/portfolio';
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+
+import { skills } from '../data/portfolio'
 
 export default function Skills() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
     <section id="skills" className="py-24 px-6" ref={ref}>
@@ -52,5 +53,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import type { Profile, SkillGroup, Project, Job } from '../types/portfolio';
+import type { Job,Profile, Project, SkillGroup } from '../types/portfolio'
 
 export const profile: Profile = {
   name: 'Mari Pereira',
@@ -10,14 +10,14 @@ export const profile: Profile = {
   github: 'https://github.com/MariPereiraFree',
   linkedin: 'https://www.linkedin.com/in/mariana-savoldi-pereira/',
   avatar: 'https://avatars.githubusercontent.com/u/261661215?v=4',
-};
+}
 
 export const skills: SkillGroup[] = [
   { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'MUI'] },
   { category: 'Backend', items: ['Node.js', 'Express', 'NestJS', 'PostgreSQL'] },
   { category: 'DevOps', items: ['CI/CD', 'AWS', 'Vercel', 'Netlify', 'GitHub Actions'] },
   { category: 'Tools', items: ['Git', 'Figma', 'Jest'] },
-];
+]
 
 export const projects: Project[] = [
   {
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     featured: false,
     gradient: 'from-amber-600 to-orange-600',
   },
-];
+]
 
 export const experience: Job[] = [
   {
@@ -84,4 +84,4 @@ export const experience: Job[] = [
     description: 'Built and maintained websites for local businesses and startups. Handled full project lifecycle from design to deployment.',
     tech: ['React', 'WordPress', 'Tailwind'],
   },
-];
+]

@@ -1,21 +1,22 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { profile } from '../data/portfolio';
-import * as Avatar from '@radix-ui/react-avatar';
-import type { Stat } from '../types/portfolio';
+import * as Avatar from '@radix-ui/react-avatar'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+
+import { profile } from '../data/portfolio'
+import type { Stat } from '../types/portfolio'
 
 const stats: Stat[] = [
   { value: '4+', label: 'Years experience' },
   { value: '30+', label: 'Projects shipped' },
   { value: '15+', label: 'Happy clients' },
   { value: '∞', label: 'Cups of coffee' },
-];
+]
 
-const traits = ['Problem Solver', 'Team Player', 'Fast Learner', 'Pixel-Perfect'] as const;
+const traits = ['Problem Solver', 'Team Player', 'Fast Learner', 'Pixel-Perfect'] as const
 
 export default function About() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
     <section id="about" className="py-24 px-6" ref={ref}>
@@ -29,7 +30,7 @@ export default function About() {
           {/* Avatar side */}
           <div className="flex flex-col items-center md:items-start gap-8">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-600/30 to-indigo-600/30 rounded-3xl blur-xl scale-110" />
+              <div className="absolute inset-0 bg-linear-to-br from-violet-600/30 to-indigo-600/30 rounded-3xl blur-xl scale-110" />
               <Avatar.Root className="relative w-56 h-56 rounded-3xl overflow-hidden border-2 border-violet-500/20">
                 <Avatar.Image
                   src={profile.avatar}
@@ -74,7 +75,9 @@ export default function About() {
             </p>
 
             <p className="text-slate-400 leading-relaxed">
-              When I&apos;m not coding, you&apos;ll find me hiking, reading sci-fi, or tinkering with side projects. I believe the best products come from teams that combine technical rigor with genuine empathy for users.
+              When I&apos;m not coding, you&apos;ll find me hiking, reading sci-fi, or tinkering
+              with side projects. I believe the best products come from teams that combine
+              technical rigor with genuine empathy for users.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -98,5 +101,5 @@ export default function About() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

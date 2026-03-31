@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import type { NavLink } from '../types/portfolio';
+import { AnimatePresence,motion } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+import { useEffect,useState } from 'react'
+
+import type { NavLink } from '../types/portfolio'
 
 const links: NavLink[] = [
   { label: 'About', href: '#about' },
@@ -9,18 +10,18 @@ const links: NavLink[] = [
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
-];
+]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [active, setActive] = useState('');
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [active, setActive] = useState('')
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <motion.header
@@ -47,11 +48,12 @@ export default function Navbar() {
               <a
                 href={href}
                 onClick={() => setActive(href)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                  active === href
-                    ? 'text-white bg-white/10'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
+                  duration-200 ${
+            active === href
+              ? 'text-white bg-white/10'
+              : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
               >
                 {label}
               </a>
@@ -90,7 +92,7 @@ export default function Navbar() {
                 <li key={href}>
                   <a
                     href={href}
-                    onClick={() => { setActive(href); setMobileOpen(false); }}
+                    onClick={() => { setActive(href); setMobileOpen(false) }}
                     className="block px-4 py-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     {label}
@@ -102,5 +104,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.header>
-  );
+  )
 }

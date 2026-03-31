@@ -1,12 +1,13 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Briefcase } from 'lucide-react';
-import * as Separator from '@radix-ui/react-separator';
-import { experience } from '../data/portfolio';
+import * as Separator from '@radix-ui/react-separator'
+import { motion, useInView } from 'framer-motion'
+import { Briefcase } from 'lucide-react'
+import { useRef } from 'react'
+
+import { experience } from '../data/portfolio'
 
 export default function Experience() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
     <section id="experience" className="py-24 px-6" ref={ref}>
@@ -71,5 +72,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,25 +1,25 @@
-import { motion, type Variants } from 'framer-motion';
-import { ArrowDown, MapPin } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
-import { profile } from '../data/portfolio';
+import { motion, type Transition } from 'framer-motion'
+import { ArrowDown, MapPin } from 'lucide-react'
+
+import { profile } from '../data/portfolio'
+import { GithubIcon, LinkedinIcon } from './SocialIcons'
 
 interface FadeUpProps {
   initial: { opacity: number; y: number };
   animate: { opacity: number; y: number };
-  transition: { duration: number; delay: number; ease: string };
+  transition: Transition;
 }
 
 const fadeUp = (delay = 0): FadeUpProps => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: 'easeOut' },
-});
+})
 
 const socialLinks = [
   { icon: GithubIcon, href: profile.github, label: 'GitHub' },
   { icon: LinkedinIcon, href: profile.linkedin, label: 'LinkedIn' },
-  { icon: TwitterIcon, href: profile.twitter, label: 'Twitter' },
-] as const;
+] as const
 
 export default function Hero() {
   return (
@@ -58,7 +58,7 @@ export default function Hero() {
         >
           Hi, I&apos;m{' '}
           <span className="relative inline-block">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-indigo-400">
               {profile.name}
             </span>
           </span>
@@ -116,5 +116,5 @@ export default function Hero() {
         <ArrowDown size={20} />
       </motion.div>
     </section>
-  );
+  )
 }
