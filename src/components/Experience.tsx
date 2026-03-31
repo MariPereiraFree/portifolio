@@ -46,14 +46,14 @@ export default function Experience() {
                       <h3 className="text-white font-bold text-lg">{job.role}</h3>
                       <p className="text-violet-400 font-medium">{job.company}</p>
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/8 text-slate-400 text-sm">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/8 text-slate-200 text-sm">
                       {job.period}
                     </span>
                   </div>
 
                   <Separator.Root className="bg-[#1e1e2e] h-px my-4" />
 
-                  <p className="text-slate-400 text-sm leading-relaxed mb-4">{job.description}</p>
+                  <p className="text-slate-200 text-sm leading-relaxed mb-4">{job.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {job.tech.map((t) => (

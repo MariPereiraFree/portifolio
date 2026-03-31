@@ -37,7 +37,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white transition-colors"
                   >
                     <GithubIcon size={15} />
                   </a>
@@ -59,7 +59,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white transition-colors"
                   >
                     <ExternalLink size={15} />
                   </a>
@@ -84,7 +84,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 rounded-md bg-white/5 text-slate-400 text-xs font-medium"
+              className="px-2.5 py-1 rounded-md bg-white/5 text-slate-200 text-xs font-medium"
             >
               {tag}
             </span>
@@ -113,7 +113,7 @@ export default function Projects() {
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Portfolio</p>
           <h2 className="text-4xl font-bold text-white">Featured Projects</h2>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+          <p className="text-slate-200 mt-4 max-w-xl mx-auto">
             A selection of things I&apos;ve built. Each project taught me something new.
           </p>
         </motion.div>

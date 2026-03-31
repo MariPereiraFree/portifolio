@@ -50,7 +50,7 @@ export default function About() {
                   className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-4 text-center"
                 >
                   <div className="text-2xl font-bold text-white">{value}</div>
-                  <div className="text-xs text-slate-500 mt-1">{label}</div>
+                  <div className="text-xs text-slate-300 mt-1">{label}</div>
                 </div>
               ))}
             </div>
@@ -70,11 +70,11 @@ export default function About() {
               </h2>
             </div>
 
-            <p className="text-slate-400 text-lg leading-relaxed">
+            <p className="text-slate-200 text-lg leading-relaxed">
               {profile.bio}
             </p>
 
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-slate-200 leading-relaxed">
               When I&apos;m not coding, you&apos;ll find me hiking, reading sci-fi, or tinkering
               with side projects. I believe the best products come from teams that combine
               technical rigor with genuine empathy for users.

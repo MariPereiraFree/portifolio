@@ -18,7 +18,7 @@ export default function Skills() {
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Tech Stack</p>
           <h2 className="text-4xl font-bold text-white">Skills &amp; Technologies</h2>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+          <p className="text-slate-200 mt-4 max-w-xl mx-auto">
             Tools and technologies I work with on a daily basis to build great products.
           </p>
         </motion.div>

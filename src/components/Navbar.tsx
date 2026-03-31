@@ -5,7 +5,7 @@ import { useEffect,useState } from 'react'
 import type { NavLink } from '../types/portfolio'
 
 const links: NavLink[] = [
-  { label: 'About', href: '#about' },
+  { label: 'About Me', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
@@ -52,7 +52,7 @@ export default function Navbar() {
                   duration-200 ${
             active === href
               ? 'text-white bg-white/10'
-              : 'text-slate-400 hover:text-white hover:bg-white/5'
+              : 'text-slate-200 hover:text-white hover:bg-white/5'
             }`}
               >
                 {label}
@@ -70,7 +70,7 @@ export default function Navbar() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-slate-400 hover:text-white"
+          className="md:hidden text-slate-200 hover:text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -93,7 +93,7 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={() => { setActive(href); setMobileOpen(false) }}
-                    className="block px-4 py-3 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block px-4 py-3 rounded-lg text-sm text-slate-200 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     {label}
                   </a>

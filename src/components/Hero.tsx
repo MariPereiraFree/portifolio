@@ -46,7 +46,7 @@ export default function Hero() {
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
             Available for work
           </span>
-          <span className="flex items-center gap-1.5 text-slate-500 text-xs">
+          <span className="flex items-center gap-1.5 text-slate-300 text-xs">
             <MapPin size={12} />
             {profile.location}
           </span>
@@ -66,14 +66,14 @@ export default function Hero() {
 
         <motion.p
           {...fadeUp(0.3)}
-          className="text-xl sm:text-2xl text-slate-400 font-medium mb-4"
+          className="text-xl sm:text-2xl text-slate-200 font-medium mb-4"
         >
           {profile.role}
         </motion.p>
 
         <motion.p
           {...fadeUp(0.4)}
-          className="text-slate-500 text-lg max-w-2xl mx-auto mb-10"
+          className="text-slate-300 text-lg max-w-2xl mx-auto mb-10"
         >
           {profile.tagline}
         </motion.p>
@@ -101,7 +101,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-400 hover:text-white transition-all duration-200"
+              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white transition-all duration-200"
             >
               <Icon size={18} />
             </a>
@@ -111,7 +111,7 @@ export default function Hero() {
 
       <motion.div
         {...fadeUp(0.8)}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-200 animate-bounce"
       >
         <ArrowDown size={20} />
       </motion.div>
