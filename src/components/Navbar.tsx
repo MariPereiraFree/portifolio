@@ -35,10 +35,10 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <motion.a
           href="#"
-          className="text-white font-bold text-lg tracking-tight"
+          className="font-mono text-white font-bold text-lg tracking-tight"
           whileHover={{ scale: 1.05 }}
         >
-          mari<span className="text-violet-400">.</span>dev
+          mari<span className="text-[#8B5CF6]">.</span>dev
         </motion.a>
 
         {/* Desktop links */}
@@ -52,7 +52,7 @@ export default function Navbar() {
                   duration-200 ${
             active === href
               ? 'text-white bg-white/10'
-              : 'text-slate-200 hover:text-white hover:bg-white/5'
+              : 'text-[#EDE9FE] hover:text-white hover:bg-white/5'
             }`}
               >
                 {label}
@@ -63,14 +63,14 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#7C3AED] hover:bg-[#8B5CF6] text-white text-sm font-medium transition-colors duration-200"
         >
           Hire me
         </a>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-slate-200 hover:text-white"
+          className="md:hidden text-[#EDE9FE] hover:text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -93,7 +93,7 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={() => { setActive(href); setMobileOpen(false) }}
-                    className="block px-4 py-3 rounded-lg text-sm text-slate-200 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block px-4 py-3 rounded-lg text-sm text-[#EDE9FE] hover:text-white hover:bg-white/5 transition-colors"
                   >
                     {label}
                   </a>

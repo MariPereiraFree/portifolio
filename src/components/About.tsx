@@ -37,7 +37,7 @@ export default function About() {
                   alt={profile.name}
                   className="w-full h-full object-cover bg-[#111118]"
                 />
-                <Avatar.Fallback className="w-full h-full flex items-center justify-center bg-violet-900/50 text-violet-300 text-5xl font-bold">
+                <Avatar.Fallback className="w-full h-full flex items-center justify-center bg-violet-900/50 text-[#C4B5FD] text-5xl font-display font-bold">
                   {profile.name[0]}
                 </Avatar.Fallback>
               </Avatar.Root>
@@ -49,8 +49,8 @@ export default function About() {
                   key={label}
                   className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-4 text-center"
                 >
-                  <div className="text-2xl font-bold text-white">{value}</div>
-                  <div className="text-xs text-slate-300 mt-1">{label}</div>
+                  <div className="font-display text-2xl font-bold text-white">{value}</div>
+                  <div className="font-mono text-xs text-[#C4B5FD] mt-1 uppercase tracking-[0.1em]">{label}</div>
                 </div>
               ))}
             </div>
@@ -64,17 +64,17 @@ export default function About() {
             className="space-y-6"
           >
             <div>
-              <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">About me</p>
-              <h2 className="text-4xl font-bold text-white leading-tight">
+              <p className="font-mono text-[#8B5CF6] text-xs font-normal uppercase tracking-[0.1em] mb-3">About me</p>
+              <h2 className="font-display text-4xl font-bold text-white leading-tight">
                 Passionate about crafting great software
               </h2>
             </div>
 
-            <p className="text-slate-200 text-lg leading-relaxed">
+            <p className="text-[#EDE9FE] text-lg leading-[1.6]">
               {profile.bio}
             </p>
 
-            <p className="text-slate-200 leading-relaxed">
+            <p className="text-[#EDE9FE] leading-[1.7]">
               When I&apos;m not coding, you&apos;ll find me hiking, reading sci-fi, or tinkering
               with side projects. I believe the best products come from teams that combine
               technical rigor with genuine empathy for users.
@@ -84,7 +84,7 @@ export default function About() {
               {traits.map((trait) => (
                 <span
                   key={trait}
-                  className="px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-sm font-medium"
+                  className="font-mono px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-[#C4B5FD] text-xs uppercase tracking-[0.1em]"
                 >
                   {trait}
                 </span>
@@ -93,7 +93,7 @@ export default function About() {
 
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-[#8B5CF6] hover:text-[#C4B5FD] font-medium transition-colors"
             >
               {profile.email} →
             </a>

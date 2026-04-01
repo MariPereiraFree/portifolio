@@ -42,11 +42,11 @@ export default function Hero() {
 
       <div className="max-w-4xl mx-auto text-center">
         <motion.div {...fadeUp(0.1)} className="flex items-center justify-center gap-2 mb-6">
-          <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#10B981]/10 border border-[#10B981]/20 text-[#10B981] text-xs font-mono uppercase tracking-[0.1em]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
             Available for work
           </span>
-          <span className="flex items-center gap-1.5 text-slate-300 text-xs">
+          <span className="flex items-center gap-1.5 text-[#C4B5FD] text-xs font-mono">
             <MapPin size={12} />
             {profile.location}
           </span>
@@ -54,11 +54,11 @@ export default function Hero() {
 
         <motion.h1
           {...fadeUp(0.2)}
-          className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6"
+          className="font-display text-6xl sm:text-7xl md:text-[72px] font-extrabold text-white tracking-[-0.02em] leading-tight mb-6"
         >
           Hi, I&apos;m{' '}
           <span className="relative inline-block">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#7C3AED] to-[#A78BFA]">
               {profile.name}
             </span>
           </span>
@@ -66,14 +66,14 @@ export default function Hero() {
 
         <motion.p
           {...fadeUp(0.3)}
-          className="text-xl sm:text-2xl text-slate-200 font-medium mb-4"
+          className="font-mono text-sm sm:text-base text-[#8B5CF6] font-normal uppercase tracking-[0.1em] mb-4"
         >
           {profile.role}
         </motion.p>
 
         <motion.p
           {...fadeUp(0.4)}
-          className="text-slate-300 text-lg max-w-2xl mx-auto mb-10"
+          className="text-[#EDE9FE] text-lg max-w-2xl mx-auto mb-10 leading-[1.6]"
         >
           {profile.tagline}
         </motion.p>
@@ -81,13 +81,13 @@ export default function Hero() {
         <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center justify-center gap-3 mb-14">
           <a
             href="#projects"
-            className="px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition-all duration-200 hover:shadow-lg hover:shadow-violet-600/25"
+            className="px-6 py-3 rounded-xl bg-[#7C3AED] hover:bg-[#8B5CF6] text-white font-medium transition-all duration-200 hover:shadow-lg hover:shadow-[#7C3AED]/25"
           >
             View my work
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all duration-200"
+            className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-[#EDE9FE] font-medium transition-all duration-200"
           >
             Get in touch
           </a>
@@ -101,7 +101,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white transition-all duration-200"
+              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-[#EDE9FE] hover:text-white transition-all duration-200"
             >
               <Icon size={18} />
             </a>
@@ -111,7 +111,7 @@ export default function Hero() {
 
       <motion.div
         {...fadeUp(0.8)}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-200 animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#C4B5FD] animate-bounce"
       >
         <ArrowDown size={20} />
       </motion.div>

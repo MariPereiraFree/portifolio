@@ -18,8 +18,8 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Career</p>
-          <h2 className="text-4xl font-bold text-white">Work Experience</h2>
+          <p className="font-mono text-[#8B5CF6] text-xs font-normal uppercase tracking-[0.1em] mb-3">Career</p>
+          <h2 className="font-display text-4xl font-bold text-white">Work Experience</h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto relative">
@@ -36,30 +36,30 @@ export default function Experience() {
                 className="relative md:pl-16"
               >
                 {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-0 top-6 w-12 h-12 items-center justify-center rounded-xl bg-violet-600/20 border border-violet-500/30 text-violet-400">
+                <div className="hidden md:flex absolute left-0 top-6 w-12 h-12 items-center justify-center rounded-xl bg-violet-600/20 border border-violet-500/30 text-[#8B5CF6]">
                   <Briefcase size={18} />
                 </div>
 
                 <div className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 hover:border-violet-500/20 transition-colors duration-300">
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-white font-bold text-lg">{job.role}</h3>
-                      <p className="text-violet-400 font-medium">{job.company}</p>
+                      <h3 className="font-display text-white font-bold text-[22px]">{job.role}</h3>
+                      <p className="text-[#8B5CF6] font-medium">{job.company}</p>
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/8 text-slate-200 text-sm">
+                    <span className="font-mono px-3 py-1 rounded-full bg-white/5 border border-white/8 text-[#C4B5FD] text-xs uppercase tracking-[0.1em]">
                       {job.period}
                     </span>
                   </div>
 
                   <Separator.Root className="bg-[#1e1e2e] h-px my-4" />
 
-                  <p className="text-slate-200 text-sm leading-relaxed mb-4">{job.description}</p>
+                  <p className="text-[#EDE9FE] text-sm leading-[1.7] mb-4">{job.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {job.tech.map((t) => (
                       <span
                         key={t}
-                        className="px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs font-medium"
+                        className="font-mono px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/20 text-[#C4B5FD] text-xs uppercase tracking-[0.1em]"
                       >
                         {t}
                       </span>

@@ -26,7 +26,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
 
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-white font-bold text-xl group-hover:text-violet-300 transition-colors">
+          <h3 className="font-display text-[22px] font-semibold text-white group-hover:text-[#C4B5FD] transition-colors">
             {project.title}
           </h3>
           <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -37,7 +37,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-[#EDE9FE] hover:text-white transition-colors"
                   >
                     <GithubIcon size={15} />
                   </a>
@@ -59,7 +59,7 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-[#EDE9FE] hover:text-white transition-colors"
                   >
                     <ExternalLink size={15} />
                   </a>
@@ -78,13 +78,13 @@ function ProjectCard({ project, index, inView }: ProjectCardProps) {
           </div>
         </div>
 
-        <p className="text-slate-300 text-sm leading-relaxed mb-4">{project.description}</p>
+        <p className="text-[#C4B5FD] text-sm leading-[1.7] mb-4">{project.description}</p>
 
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 rounded-md bg-white/5 text-slate-200 text-xs font-medium"
+              className="font-mono px-2.5 py-1 rounded-md bg-white/5 text-[#C4B5FD] text-xs uppercase tracking-[0.1em]"
             >
               {tag}
             </span>
@@ -111,9 +111,9 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Portfolio</p>
-          <h2 className="text-4xl font-bold text-white">Featured Projects</h2>
-          <p className="text-slate-200 mt-4 max-w-xl mx-auto">
+          <p className="font-mono text-[#8B5CF6] text-xs font-normal uppercase tracking-[0.1em] mb-3">Portfolio</p>
+          <h2 className="font-display text-4xl font-bold text-white">Featured Projects</h2>
+          <p className="text-[#EDE9FE] mt-4 max-w-xl mx-auto leading-[1.7]">
             A selection of things I&apos;ve built. Each project taught me something new.
           </p>
         </motion.div>

@@ -36,9 +36,9 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">Contact</p>
-          <h2 className="text-4xl font-bold text-white">Let&apos;s work together</h2>
-          <p className="text-slate-200 mt-4 max-w-xl mx-auto">
+          <p className="font-mono text-[#8B5CF6] text-xs font-normal uppercase tracking-[0.1em] mb-3">Contact</p>
+          <h2 className="font-display text-4xl font-bold text-white">Let&apos;s work together</h2>
+          <p className="text-[#EDE9FE] mt-4 max-w-xl mx-auto leading-[1.7]">
             Have a project in mind? I&apos;d love to hear about it. Reach out and let&apos;s
             make something great.
           </p>
@@ -53,8 +53,8 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-white font-semibold text-lg mb-2">Get in touch</h3>
-              <p className="text-slate-200 leading-relaxed">
+              <h3 className="font-display text-white font-semibold text-[22px] mb-2">Get in touch</h3>
+              <p className="text-[#EDE9FE] leading-[1.7]">
                 I&apos;m currently available for freelance work and full-time positions. If you
                 have a project that needs a skilled developer, I&apos;m your person.
               </p>
@@ -62,16 +62,16 @@ export default function Contact() {
 
             <a
               href={`mailto:${profile.email}`}
-              className="flex items-center gap-3 text-slate-200 hover:text-violet-400 transition-colors group"
+              className="flex items-center gap-3 text-[#EDE9FE] hover:text-[#8B5CF6] transition-colors group"
             >
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 group-hover:bg-violet-500/20 transition-colors">
+              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/20 text-[#8B5CF6] group-hover:bg-violet-500/20 transition-colors">
                 <Mail size={18} />
               </div>
               <span className="font-medium">{profile.email}</span>
             </a>
 
             <div className="space-y-3">
-              <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">Find me on</p>
+              <p className="font-mono text-[#C4B5FD] text-xs uppercase tracking-[0.1em]">Find me on</p>
               <div className="flex gap-3">
                 {socials.map(({ icon: Icon, label, href, color }) => (
                   <a
@@ -81,7 +81,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     aria-label={label}
                     className={`w-11 h-11 flex items-center justify-center rounded-xl
-                      bg-white/5 border border-white/8 text-slate-200 ${color}
+                      bg-white/5 border border-white/8 text-[#EDE9FE] ${color}
                       transition-all duration-200 hover:bg-white/10`}
                   >
                     <Icon size={18} />
@@ -103,12 +103,12 @@ export default function Contact() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="h-full flex flex-col items-center justify-center gap-4 text-center py-12"
               >
-                <CheckCircle className="text-green-400" size={48} />
-                <h3 className="text-white font-semibold text-xl">Message sent!</h3>
-                <p className="text-slate-200">Thanks for reaching out. I&apos;ll get back to you soon.</p>
+                <CheckCircle className="text-[#10B981]" size={48} />
+                <h3 className="font-display text-white font-semibold text-xl">Message sent!</h3>
+                <p className="text-[#EDE9FE]">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 <button
                   onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
-                  className="text-violet-400 hover:text-violet-300 text-sm underline"
+                  className="text-[#8B5CF6] hover:text-[#C4B5FD] text-sm underline"
                 >
                   Send another
                 </button>
@@ -117,7 +117,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 {inputFields.map(({ id, label, type, placeholder }) => (
                   <div key={id}>
-                    <label htmlFor={id} className="block text-sm font-medium text-slate-200 mb-1.5">
+                    <label htmlFor={id} className="block text-sm font-medium text-[#EDE9FE] mb-1.5">
                       {label}
                     </label>
                     <input
@@ -127,12 +127,12 @@ export default function Contact() {
                       placeholder={placeholder}
                       value={form[id]}
                       onChange={(e) => setForm({ ...form, [id]: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-300 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-[#C4B5FD]/50 focus:outline-none focus:border-[#8B5CF6]/50 focus:ring-1 focus:ring-[#8B5CF6]/20 transition-colors"
                     />
                   </div>
                 ))}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-1.5">
+                  <label htmlFor="message" className="block text-sm font-medium text-[#EDE9FE] mb-1.5">
                     Message
                   </label>
                   <textarea
@@ -142,12 +142,12 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-slate-300 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#111118] border border-[#1e1e2e] text-white placeholder:text-[#C4B5FD]/50 focus:outline-none focus:border-[#8B5CF6]/50 focus:ring-1 focus:ring-[#8B5CF6]/20 transition-colors resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition-all duration-200 hover:shadow-lg hover:shadow-violet-600/25"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#7C3AED] hover:bg-[#8B5CF6] text-white font-medium transition-all duration-200 hover:shadow-lg hover:shadow-[#7C3AED]/25"
                 >
                   <Send size={16} />
                   Send message
